@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Grill Pan | Ctrlix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--primary:#00e1ff;--secondary:#ff4dff;--bg:#0d1117}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Roboto',sans-serif;color:#e2e8f0;background:var(--bg)}
+    header{padding:2rem 1rem;text-align:center;background:#05070f;border-bottom:1px solid rgba(255,255,255,0.1)}
+    header h1{font-family:'Orbitron',sans-serif;font-size:2rem;color:var(--primary)}
+    main{max-width:960px;margin:auto;padding:2rem 1rem}
+    .hero{display:flex;flex-direction:column;gap:2rem}
+    .hero img{width:100%;border-radius:12px;object-fit:cover;box-shadow:0 0 12px rgba(0,0,0,0.4)}
+    .hero-content h2{font-family:'Orbitron',sans-serif;font-size:1.8rem;color:var(--primary);margin-bottom:1rem}
+    .hero-content p{line-height:1.65;margin-bottom:1.2rem;font-size:1rem}
+    .specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:2rem}
+    .spec{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1rem;text-align:center}
+    .spec h4{font-family:'Orbitron',sans-serif;font-size:1.1rem;color:var(--primary);margin-bottom:.5rem}
+    .back{display:inline-block;margin-top:2rem;padding:.8rem 1.6rem;border:2px solid var(--primary);border-radius:30px;color:var(--primary);text-decoration:none;font-family:'Orbitron',sans-serif;transition:.35s}
+    .back:hover{background:var(--primary);color:#0d1117;transform:translateY(-3px)}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Grill Pan</h1>
+  </header>
+  <main>
+    <div class="hero">
+      <img src="grill_pan.jpg" alt="Smart Grill Pan" />
+      <div class="hero-content">
+        <h2>Physics-AI Thermal Mastery</h2>
+        <p>
+          The Smart Grill Pan leverages <strong>Physics-Informed AI</strong> to monitor and predict heat flow across its heavy-duty cast surface. Advanced sensors feed a thermal model that adjusts burner power in real time, guaranteeing perfect Maillard browning without hotspots.
+        </p>
+        <p>
+          Whether you're searing steak or grilling vegetables, the pan maintains uniform temperature within ±2 °C, producing professional grill marks and locking in flavor with minimal user intervention.
+        </p>
+      </div>
+    </div>
+
+    <section class="specs">
+      <div class="spec"><h4>Material</h4><p>Pre‑seasoned Cast Iron</p></div>
+      <div class="spec"><h4>Temperature Accuracy</h4><p>±2 °C across surface</p></div>
+      <div class="spec"><h4>Size</h4><p>24 in × 16 in cooking area</p></div>
+      <div class="spec"><h4>AI Control</h4><p>Bluetooth link to app for presets</p></div>
+      <div class="spec"><h4>Cleaning</h4><p>Removable drip tray, dishwasher safe</p></div>
+    </section>
+
+    <a href="index.html#products" class="back">← 返回產品總覽</a>
+  </main>
+</body>
+</html>
