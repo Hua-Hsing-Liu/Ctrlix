@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ctrlix | Futuristic AI Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#00e1ff;
+      --secondary:#ff4dff;
+      --bg1:#0d1117;
+      --bg2:#05070f;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;width:100%;font-family:'Roboto',sans-serif;color:#e2e8f0;background:linear-gradient(135deg,var(--bg1),var(--bg2));scroll-behavior:smooth;overflow-x:hidden}
+    canvas#starfield{position:fixed;inset:0;z-index:0;display:block}
+    header{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    h1{font-family:'Orbitron',sans-serif;font-weight:600;font-size:clamp(3rem,8vw,6rem);letter-spacing:.06em;color:var(--primary);text-shadow:0 0 15px var(--primary);animation:pulse 4s ease-in-out infinite alternate}
+    @keyframes pulse{from{text-shadow:0 0 10px var(--primary)}to{text-shadow:0 0 30px var(--primary),0 0 60px var(--secondary)}}
+    p.tag{margin-top:1rem;font-size:1.25rem;max-width:640px;line-height:1.6}
+    .btn-wrap{margin-top:2.5rem;display:flex;gap:1.5rem}
+    .btn{padding:.85rem 1.8rem;border:2px solid var(--primary);border-radius:40px;font-family:'Orbitron',sans-serif;font-size:.95rem;color:var(--primary);text-decoration:none;position:relative;transition:.4s}
+    .btn::before{content:"";position:absolute;inset:0;background:var(--primary);opacity:0;transition:.4s;border-radius:inherit;z-index:-1}
+    .btn:hover{color:#0d1117;transform:translateY(-3px)}
+    .btn:hover::before{opacity:1;filter:blur(8px)}
+
+    section{position:relative;z-index:1;padding:4rem 1rem;max-width:1100px;margin:auto}
+    h2.sec-title{font-family:'Orbitron',sans-serif;text-align:center;font-size:2.2rem;margin-bottom:1.5rem;color:var(--primary)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem}
+    .card,.product,.case{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:18px;backdrop-filter:blur(6px);transition:transform .5s}
+    .card:hover,.product:hover,.case:hover{transform:translateY(-6px) scale(1.02)}
+    .card{padding:2rem;text-align:center}
+    .card h3{font-family:'Orbitron',sans-serif;font-size:1.4rem;margin-bottom:.7rem;color:var(--primary)}
+    .card p{font-size:.95rem;line-height:1.55}
+    .card.center{grid-column:1/-1;max-width:380px;margin:auto}
+    /* Make the entire product card clickable */
+    .product{display:block;overflow:hidden;text-decoration:none;color:inherit}
+    .product img,.case img{width:100%;height:200px;object-fit:cover}
+    .product-content,.case-content{padding:1.4rem;text-align:center}
+    .product h3,.case h3{font-family:'Orbitron',sans-serif;font-size:1.3rem;margin-bottom:.5rem;color:var(--primary)}
+    .product p,.case p{font-size:.9rem;line-height:1.5}
+    footer{position:relative;z-index:1;text-align:center;background:#05070f;padding:2rem 1rem;font-size:.9rem;border-top:1px solid rgba(255,255,255,0.15)}
+    footer a{color:var(--primary);text-decoration:none}
+  </style>
+</head>
+<body>
+  <!-- animated starfield -->
+  <canvas id="starfield"></canvas>
+
+  <header>
+    <h1>Ctrlix</h1>
+    <p class="tag">Physics‑Inspired AI bridging the digital &amp; physical realms.</p>
+    <div class="btn-wrap">
+      <a href="#capabilities" class="btn">產品服務</a>
+      <a href="#cases" class="btn">實際案例</a>
+    </div>
+  </header>
+
+  <!-- Services / Capabilities -->
+  <section id="capabilities">
+    <h2 class="sec-title">Our Capabilities</h2>
+    <div class="grid">
+      <div class="card center">
+        <h3>Physics‑Informed ML</h3>
+        <p>We fuse fundamental physics with machine learning to create accurate, interpretable, and data‑efficient models.</p>
+      </div>
+      <div class="card"><h3>Product Design</h3><p>Simulation‑driven design workflows turn innovative ideas into manufacturable products.</p></div>
+      <div class="card"><h3>Physics Patent Generation</h3><p>Transform cutting‑edge research into defensible IP portfolios.</p></div>
+      <div class="card"><h3>Edge Device Development</h3><p>Deploy physics‑aware intelligence on low‑power hardware for real‑time insights.</p></div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section id="products">
+    <h2 class="sec-title">Product Showcase</h2>
+    <div class="grid">
+      <!-- AI‑Optimized Induction Hob -->
+      <a href="induction.html" class="product">
+        <img src="induction_hob.jpg" alt="AI‑Optimized Induction Hob">
+        <div class="product-content">
+          <h3>AI‑Optimized Induction Hob</h3>
+          <p>Dynamic electromagnetic control powered by Physics‑AI for unparalleled efficiency.</p>
+        </div>
+      </a>
+      <!-- Smart Grill Pan -->
+      <a href="grill.html" class="product">
+        <img src="grill_pan.jpg" alt="Smart Grill Pan">
+        <div class="product-content">
+          <h3>Smart Grill Pan</h3>
+          <p>Physics‑AI thermal modeling ensures perfect sear lines and even heating.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Real Cases -->
+  <section id="cases">
+    <h2 class="sec-title">Success Stories</h2>
+    <div class="grid">
+      <div class="case">
+        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=60" alt="Case Study 1">
+        <div class="case-content">
+          <h3>Smart Factory Thermal Control</h3>
+          <p>Deployed our Physics‑AI models on edge devices to cut energy consumption by 22% in a semiconductor fab.</p>
+        </div>
+      </div>
+      <div class="case">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60" alt="Case Study 2">
+        <div class="case-content">
+          <h3>Predictive Maintenance for HVAC</h3>
+          <p>Implemented digital‑twin powered monitoring that reduced downtime by 35% across 12 commercial buildings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>科睿思股份有限公司 © 2025</p>
+    <p>Email: <a href="mailto:Ctrlix_AI.gmail.com">Ctrlix_AI.gmail.com</a> ｜ Line: Ctrlix_AI ｜ 電話: 092‑182‑0652</p>
+  </footer>
+
+  <!-- Starfield animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const canvas=document.getElementById('starfield');
+      const ctx=canvas.getContext('2d');
+      let stars=[];
+      const NUM=160;
+
+      function resize(){
+        canvas.width=window.innerWidth;
+        canvas.height=window.innerHeight;
+      }
+
+      class Star{
+        constructor(){this.reset();}
+        reset(){
+          this.x=Math.random()*canvas.width;
+          this.y=Math.random()*canvas.height;
+          this.z=Math.random()*canvas.width;
+          this.pz=this.z;
+        }
+        update(){
+          this.z-=2;
+          if(this.z<1){this.reset();this.z=canvas.width;this.pz=this.z;}
+        }
+        draw(){
+          const sx=(this.x-canvas.width/2)*(canvas.width/this.z)+canvas.width/2;
+          const sy=(this.y-canvas.height/2)*(canvas.width/this.z)+canvas.height/2;
+          const px=(this.x-canvas.width/2)*(canvas.width/this.pz)+canvas.width/2;
+          const py=(this.y-canvas.height/2)*(canvas.width/this.pz)+canvas.height/2;
+          this.pz=this.z;
+          ctx.strokeStyle='hsla(190,100%,70%,0.8)';
+          ctx.lineWidth=1;
+          ctx.beginPath();
+          ctx.moveTo(px,py);
+          ctx.lineTo(sx,sy);
+          ctx.stroke();
+        }
+      }
+
+      function init(){
+        stars=Array.from({length:NUM},()=>new Star());
+      }
+
+      function animate(){
+        ctx.fillStyle='rgba(13,17,23,0.35)';
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+        stars.forEach(s=>{s.update();s.draw();});
+        requestAnimationFrame(animate);
+      }
+
+      window.addEventListener('resize',()=>{resize();});
+      resize();
+      init();
+      animate();
+    });
+  </script>
+</body>
+</html>
