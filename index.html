@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ctrlix | Physics-Inspired AI</title>
+  <title>Ctrlix | Physics‑Inspired AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    :root { --primary:#00e1ff; --secondary:#ff00ff; --bg-start:#0a0f24; --bg-end:#05070f; }
+    :root {
+      --primary:#00e1ff;
+      --secondary:#ff00ff;
+      --bg-start:#0a0f24;
+      --bg-end:#05070f;
+    }
+    /* reset & layout */
     *{margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%;width:100%;font-family:'Roboto',sans-serif;color:#e2e8f0;background:radial-gradient(circle at 30% 30%,rgba(0,225,255,0.15),transparent 60%),linear-gradient(135deg,var(--bg-start),var(--bg-end));overflow-x:hidden}
-    canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
+    html,body{height:100%;width:100%;font-family:'Roboto',sans-serif;color:#e2e8f0;background:radial-gradient(circle at 30% 30%,rgba(0,225,255,0.08),transparent 60%),linear-gradient(135deg,var(--bg-start),var(--bg-end));overflow-x:hidden}
+    canvas#bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
     header{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
     h1{font-family:'Orbitron',sans-serif;font-size:clamp(3rem,8vw,6rem);letter-spacing:.05em;color:var(--primary);text-shadow:0 0 10px var(--primary);animation:glow 4s ease-in-out infinite alternate}
-    @keyframes glow{from{text-shadow:0 0 10px var(--primary)}to{text-shadow:0 0 30px var(--primary),0 0 60px var(--secondary)}}
+    @keyframes glow{from{text-shadow:0 0 10px var(--primary)}to{text-shadow:0 0 25px var(--primary),0 0 55px var(--secondary)}}
     p.tagline{max-width:600px;margin-top:1rem;font-size:1.25rem;line-height:1.6}
     section{position:relative;z-index:1;padding:4rem 1rem;max-width:1100px;margin:auto}
     h2.section-title{font-family:'Orbitron',sans-serif;text-align:center;font-size:2.25rem}
@@ -23,7 +29,7 @@
     .card:hover,.product:hover{transform:translateY(-8px) scale(1.02)}
     .card h3{font-family:'Orbitron',sans-serif;font-size:1.5rem;margin-bottom:.75rem;color:var(--primary)}
     .card p{font-size:.95rem;line-height:1.6}
-    .card.center{grid-column:1/-1;max-width:350px;margin:0 auto}
+    .card.center{grid-column:1/-1;max-width:360px;margin:0 auto}
     .product{overflow:hidden}
     .product img{width:100%;height:200px;object-fit:cover;display:block}
     .product-content{padding:1.5rem;text-align:center}
@@ -39,10 +45,12 @@
   </style>
 </head>
 <body>
-  <canvas id="particleCanvas"></canvas>
+  <!-- Tech‑feel animated background -->
+  <canvas id="bg"></canvas>
+
   <header>
     <h1>Ctrlix</h1>
-    <p class="tagline">Physics-Inspired AI solutions that bridge the gap between the digital and the physical world.</p>
+    <p class="tagline">Physics‑Inspired AI bridging the digital &amp; physical worlds.</p>
   </header>
 
   <!-- Capabilities -->
@@ -50,12 +58,12 @@
     <h2 class="section-title">Our Capabilities</h2>
     <div class="grid">
       <div class="card center">
-        <h3>Physics-Informed ML</h3>
-        <p>Embedding first-principles physics into machine-learning pipelines for accurate, trustworthy, and data-efficient models.</p>
+        <h3>Physics‑Informed ML</h3>
+        <p>Embedding first‑principles physics into machine‑learning pipelines for accurate, trustworthy, and data‑efficient models.</p>
       </div>
-      <div class="card"><h3>Product Design</h3><p>Translating innovative concepts into manufacturable, user-centric products accelerated by simulation-driven workflows.</p></div>
-      <div class="card"><h3>Physics Patent Generation</h3><p>Converting breakthrough research into defensible IP through rigorous technical drafting and patent strategy.</p></div>
-      <div class="card"><h3>Edge Device Development</h3><p>Building intelligent hardware that runs physics-aware AI models in real time, from firmware to system integration.</p></div>
+      <div class="card"><h3>Product Design</h3><p>Turning innovative concepts into manufacturable, user‑centric products through simulation‑driven workflows.</p></div>
+      <div class="card"><h3>Physics Patent Generation</h3><p>Converting breakthrough research into defensible IP via rigorous technical drafting and patent strategy.</p></div>
+      <div class="card"><h3>Edge Device Development</h3><p>Building intelligent hardware that runs physics‑aware AI models in real time, from firmware to system integration.</p></div>
     </div>
   </section>
 
@@ -67,16 +75,16 @@
       <div class="product">
         <img src="5761e6d8-956a-4f27-b431-50abc38f6420.png" alt="Induction Hob" />
         <div class="product-content">
-          <h3>Physics-AI Induction Hob</h3>
-          <p>Induction cooktop employing our <strong>Physics-AI engine</strong> to modulate electromagnetic fields for unrivaled efficiency and safety.</p>
+          <h3>Physics‑AI Induction Hob</h3>
+          <p>Induction cooktop employing our <strong>Physics‑AI engine</strong> to modulate electromagnetic fields for unrivaled efficiency and safety.</p>
         </div>
       </div>
       <!-- Grill -->
       <div class="product">
         <img src="b0275dfe-e92e-4dc3-a4fb-3fdf5465da06.png" alt="Grill Pan" />
         <div class="product-content">
-          <h3>Physics-AI Grill Pan</h3>
-          <p>Smart grill that applies <strong>Physics-AI thermal modeling</strong> to deliver even heat and restaurant-quality grill marks.</p>
+          <h3>Physics‑AI Grill Pan</h3>
+          <p>Smart grill that applies <strong>Physics‑AI thermal modeling</strong> to deliver even heat and restaurant‑quality grill marks.</p>
         </div>
       </div>
     </div>
@@ -95,12 +103,88 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>科睿思股份有限公司</p>
-    <p>Email: <a href="mailto:Ctrlix_AI.gmail.com">Ctrlix_AI.gmail.com</a> | Line ID: Ctrlix_AI | 電話: 0921820652</p>
+    <p>Email: <a href="mailto:Ctrlix_AI.gmail.com">Ctrlix_AI.gmail.com</a> │ Line ID: Ctrlix_AI │ 電話: 0921820652</p>
   </footer>
 
-  <!-- Particle Background Script -->
+  <!-- Animated background script -->
   <script>
-    const c=document.getElementById('particleCanvas');const ctx=c.getContext('2d');let particles;function resize(){c.width=window.innerWidth*devicePixelRatio;c.height=window.innerHeight*devicePixelRatio;ctx.scale(devicePixelRatio,devicePixelRatio);}function createParticle(){const a=Math.random()*2*Math.PI,s=.5+Math.random();return{x:Math.random()*window.innerWidth,y
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+
+    let particles = [];
+    const NUM = 140;
+    const MAX_DIST = 120;
+
+    function resize() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = innerWidth * dpr;
+      canvas.height = innerHeight * dpr;
+      ctx.scale(dpr, dpr);
+    }
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random()*innerWidth;
+        this.y = Math.random()*innerHeight;
+        const angle = Math.random()*Math.PI*2;
+        const speed = 0.3 + Math.random()*0.7;
+        this.vx = Math.cos(angle)*speed;
+        this.vy = Math.sin(angle)*speed;
+        this.size = 1 + Math.random()*2;
+        this.hue = 180 + Math.random()*60;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if(this.x<0||this.x>innerWidth||this.y<0||this.y>innerHeight) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+        ctx.fillStyle = `hsla(${this.hue},80%,60%,0.8)`;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = Array.from({length:NUM}, () => new Particle());
+    }
+
+    function connectLines() {
+      for(let i=0;i<NUM;i++) {
+        for(let j=i+1;j<NUM;j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.hypot(dx, dy);
+          if(dist<MAX_DIST) {
+            ctx.strokeStyle = `hsla(200,80%,70%,${1-dist/MAX_DIST})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0,0,innerWidth,innerHeight);
+      particles.forEach(p=>{p.update();p.draw();});
+      connectLines();
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize',()=>{resize();});
+
+    resize();
+    initParticles();
+    animate();
+  </script>
+</body>
+</html>
