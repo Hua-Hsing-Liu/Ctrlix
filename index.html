@@ -120,7 +120,59 @@
   <!-- Starfield animation -->
   <script>
     document.addEventListener('DOMContentLoaded',()=>{
-      const canvas=document.getElementById('starfield');const ctx=canvas.getContext('2d');let stars=[];const N=140;
-      function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
-      class Star{constructor(){this.reset();}
-        reset(){this.x=Math.random()*canvas.width;this.y
+      const canvas=document.getElementById('starfield');
+      const ctx=canvas.getContext('2d');
+      let stars=[];
+      const NUM=160;
+
+      function resize(){
+        canvas.width=window.innerWidth;
+        canvas.height=window.innerHeight;
+      }
+
+      class Star{
+        constructor(){this.reset();}
+        reset(){
+          this.x=Math.random()*canvas.width;
+          this.y=Math.random()*canvas.height;
+          this.z=Math.random()*canvas.width;
+          this.pz=this.z;
+        }
+        update(){
+          this.z-=2;
+          if(this.z<1){this.reset();this.z=canvas.width;this.pz=this.z;}
+        }
+        draw(){
+          const sx=(this.x-canvas.width/2)*(canvas.width/this.z)+canvas.width/2;
+          const sy=(this.y-canvas.height/2)*(canvas.width/this.z)+canvas.height/2;
+          const px=(this.x-canvas.width/2)*(canvas.width/this.pz)+canvas.width/2;
+          const py=(this.y-canvas.height/2)*(canvas.width/this.pz)+canvas.height/2;
+          this.pz=this.z;
+          ctx.strokeStyle='hsla(190,100%,70%,0.8)';
+          ctx.lineWidth=1;
+          ctx.beginPath();
+          ctx.moveTo(px,py);
+          ctx.lineTo(sx,sy);
+          ctx.stroke();
+        }
+      }
+
+      function init(){
+        stars=Array.from({length:NUM},()=>new Star());
+      }
+
+      function animate(){
+        ctx.fillStyle='rgba(13,17,23,0.35)';
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+        stars.forEach(s=>{s.update();s.draw();});
+        requestAnimationFrame(animate);
+      }
+
+      window.addEventListener('resize',()=>{resize();});
+      resize();
+      init();
+      animate();
+    });
+  </script>
+</body>
+</html>
