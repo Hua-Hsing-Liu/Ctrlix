@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ctrlix | Physics-Inspired AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary:#00e1ff; --secondary:#ff00ff; --bg-start:#0a0f24; --bg-end:#05070f; }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;width:100%;font-family:'Roboto',sans-serif;color:#e2e8f0;background:radial-gradient(circle at 30% 30%,rgba(0,225,255,0.15),transparent 60%),linear-gradient(135deg,var(--bg-start),var(--bg-end));overflow-x:hidden}
+    canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0}
+    header{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    h1{font-family:'Orbitron',sans-serif;font-size:clamp(3rem,8vw,6rem);letter-spacing:.05em;color:var(--primary);text-shadow:0 0 10px var(--primary);animation:glow 4s ease-in-out infinite alternate}
+    @keyframes glow{from{text-shadow:0 0 10px var(--primary)}to{text-shadow:0 0 30px var(--primary),0 0 60px var(--secondary)}}
+    p.tagline{max-width:600px;margin-top:1rem;font-size:1.25rem;line-height:1.6}
+    section{position:relative;z-index:1;padding:4rem 1rem;max-width:1100px;margin:auto}
+    h2.section-title{font-family:'Orbitron',sans-serif;text-align:center;font-size:2.25rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:3rem}
+    .card,.product{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;transition:transform .6s}
+    .card{backdrop-filter:blur(6px);padding:2rem;text-align:center}
+    .card:hover,.product:hover{transform:translateY(-8px) scale(1.02)}
+    .card h3{font-family:'Orbitron',sans-serif;font-size:1.5rem;margin-bottom:.75rem;color:var(--primary)}
+    .card p{font-size:.95rem;line-height:1.6}
+    .card.center{grid-column:1/-1;max-width:350px;margin:0 auto}
+    .product{overflow:hidden}
+    .product img{width:100%;height:200px;object-fit:cover;display:block}
+    .product-content{padding:1.5rem;text-align:center}
+    .product h3{font-family:'Orbitron',sans-serif;font-size:1.4rem;margin-bottom:.5rem;color:var(--primary)}
+    .product p{font-size:.9rem;line-height:1.5}
+    .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;margin-top:3rem}
+    .member{text-align:center}
+    .member img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:2px solid var(--primary);box-shadow:0 0 10px var(--primary)}
+    .member h4{margin-top:1rem;font-family:'Orbitron',sans-serif;font-size:1.1rem}
+    footer{position:relative;z-index:1;background:#05070f;padding:2rem 1rem;text-align:center;font-size:.9rem;border-top:1px solid rgba(255,255,255,0.15)}
+    footer p{margin:.3rem 0}
+    footer a{color:var(--primary);text-decoration:none}
+  </style>
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <header>
+    <h1>Ctrlix</h1>
+    <p class="tagline">Physics-Inspired AI solutions that bridge the gap between the digital and the physical world.</p>
+  </header>
+
+  <!-- Capabilities -->
+  <section>
+    <h2 class="section-title">Our Capabilities</h2>
+    <div class="grid">
+      <div class="card center">
+        <h3>Physics-Informed ML</h3>
+        <p>Embedding first-principles physics into machine-learning pipelines for accurate, trustworthy, and data-efficient models.</p>
+      </div>
+      <div class="card"><h3>Product Design</h3><p>Translating innovative concepts into manufacturable, user-centric products accelerated by simulation-driven workflows.</p></div>
+      <div class="card"><h3>Physics Patent Generation</h3><p>Converting breakthrough research into defensible IP through rigorous technical drafting and patent strategy.</p></div>
+      <div class="card"><h3>Edge Device Development</h3><p>Building intelligent hardware that runs physics-aware AI models in real time, from firmware to system integration.</p></div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section>
+    <h2 class="section-title">Product Showcase</h2>
+    <div class="grid">
+      <!-- Induction Cooking -->
+      <div class="product">
+        <img src="5761e6d8-956a-4f27-b431-50abc38f6420.png" alt="Induction Hob" />
+        <div class="product-content">
+          <h3>Physics-AI Induction Hob</h3>
+          <p>Induction cooktop employing our <strong>Physics-AI engine</strong> to modulate electromagnetic fields for unrivaled efficiency and safety.</p>
+        </div>
+      </div>
+      <!-- Grill -->
+      <div class="product">
+        <img src="b0275dfe-e92e-4dc3-a4fb-3fdf5465da06.png" alt="Grill Pan" />
+        <div class="product-content">
+          <h3>Physics-AI Grill Pan</h3>
+          <p>Smart grill that applies <strong>Physics-AI thermal modeling</strong> to deliver even heat and restaurant-quality grill marks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section>
+    <h2 class="section-title">Our Team</h2>
+    <div class="team">
+      <div class="member"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="劉驊興" /><h4>劉驊興</h4></div>
+      <div class="member"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="莊笙揚" /><h4>莊笙揚</h4></div>
+      <div class="member"><img src="https://randomuser.me/api/portraits/women/32.jpg" alt="劉昱希" /><h4>劉昱希</h4></div>
+      <div class="member"><img src="https://randomuser.me/api/portraits/men/42.jpg" alt="李浤瑋" /><h4>李浤瑋</h4></div>
+      <div class="member"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="潘義庭" /><h4>潘義庭</h4></div>
+      <div class="member"><img src="https://randomuser.me/api/portraits/men/60.jpg" alt="李旻勳" /><h4>李旻勳</h4></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>科睿思股份有限公司</p>
+    <p>Email: <a href="mailto:Ctrlix_AI.gmail.com">Ctrlix_AI.gmail.com</a> | Line ID: Ctrlix_AI | 電話: 0921820652</p>
+  </footer>
+
+  <!-- Particle Background Script -->
+  <script>
+    const c=document.getElementById('particleCanvas');const ctx=c.getContext('2d');let particles;function resize(){c.width=window.innerWidth*devicePixelRatio;c.height=window.innerHeight*devicePixelRatio;ctx.scale(devicePixelRatio,devicePixelRatio);}function createParticle(){const a=Math.random()*2*Math.PI,s=.5+Math.random();return{x:Math.random()*window.innerWidth,y
