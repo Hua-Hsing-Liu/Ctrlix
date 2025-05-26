@@ -177,5 +177,13 @@
       animate();
     });
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+    }
+  });
+</script>
 </body>
 </html>
+
