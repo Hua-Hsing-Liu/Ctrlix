@@ -1,210 +1,551 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ctrlix | Futuristic AI Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --primary:#00e1ff;
-      --secondary:#ff4dff;
-      --bg1:#0d1117;
-      --bg2:#05070f;
-    }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%;width:100%;font-family:'Roboto',sans-serif;color:#e2e8f0;background:linear-gradient(135deg,var(--bg1),var(--bg2));scroll-behavior:smooth;overflow-x:hidden}
-    canvas#starfield{position:fixed;inset:0;z-index:0;display:block}
-    header{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-    h1{font-family:'Orbitron',sans-serif;font-weight:600;font-size:clamp(3rem,8vw,6rem);letter-spacing:.06em;color:var(--primary);text-shadow:0 0 15px var(--primary);animation:pulse 4s ease-in-out infinite alternate}
-    @keyframes pulse{from{text-shadow:0 0 10px var(--primary)}to{text-shadow:0 0 30px var(--primary),0 0 60px var(--secondary)}}
-    p.tag{margin-top:1rem;font-size:1.25rem;max-width:640px;line-height:1.6}
-    .btn-wrap{margin-top:2.5rem;display:flex;gap:1.5rem}
-    .btn{padding:.85rem 1.8rem;border:2px solid var(--primary);border-radius:40px;font-family:'Orbitron',sans-serif;font-size:.95rem;color:var(--primary);text-decoration:none;position:relative;transition:.4s}
-    .btn::before{content:"";position:absolute;inset:0;background:var(--primary);opacity:0;transition:.4s;border-radius:inherit;z-index:-1}
-    .btn:hover{color:#0d1117;transform:translateY(-3px)}
-    .btn:hover::before{opacity:1;filter:blur(8px)}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ctrlix - 智慧解決方案</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&family=Noto+Sans+TC:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="#home" class="logo-nav">C</a>
+      <nav class="navigation">
+        <a href="#about">About Us</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </header>
 
-    section{position:relative;z-index:1;padding:4rem 1rem;max-width:1100px;margin:auto}
-    h2.sec-title{font-family:'Orbitron',sans-serif;text-align:center;font-size:2.2rem;margin-bottom:1.5rem;color:var(--primary)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem}
-    .card,.product,.case{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:18px;backdrop-filter:blur(6px);transition:transform .5s}
-    .card:hover,.product:hover,.case:hover{transform:translateY(-6px) scale(1.02)}
-    .card{padding:2rem;text-align:center}
-    .card h3{font-family:'Orbitron',sans-serif;font-size:1.4rem;margin-bottom:.7rem;color:var(--primary)}
-    .card p{font-size:.95rem;line-height:1.55}
-    .card.center{grid-column:1/-1;max-width:380px;margin:auto}
-    /* Make the entire product card clickable */
-    .product{display:block;overflow:hidden;text-decoration:none;color:inherit}
-    .product img,.case img{width:100%;height:200px;object-fit:cover}
-    .product-content,.case-content{padding:1.4rem;text-align:center}
-    .product h3,.case h3{font-family:'Orbitron',sans-serif;font-size:1.3rem;margin-bottom:.5rem;color:var(--primary)}
-    .product p,.case p{font-size:.9rem;line-height:1.5}
-    footer{position:relative;z-index:1;text-align:center;background:#05070f;padding:2rem 1rem;font-size:.9rem;border-top:1px solid rgba(255,255,255,0.15)}
-    footer a{color:var(--primary);text-decoration:none}
-.case-link{
-  display:block;
-  text-decoration:none;   /* 去底線 */
-  color:inherit;          /* 跟父層一樣的字色，不會變藍 */
-}
-.case-link:hover{
-  text-decoration:none;   /* 滑過也不要底線 */
-  color:inherit;          /* 滑過不變色 */
-  cursor:pointer;         /* 滑過顯示手指 */
-}
+    <main>
+      <!-- Home -->
+      <section id="home" class="section">
+        <img src="logo_pic.png" alt="CTRLIX Logo" class="home-logo-img" />
+        <div class="home-circuit-container">
+          <!-- 你的首頁電路圖（原樣） -->
+          <svg
+            class="circuit-svg"
+            viewBox="0 0 1000 800"
+            preserveAspectRatio="xMidYMax meet"
+          >
+            <g class="line">
+              <path d="M1000,105 H800" />
+              <path d="M1000,135 H700" />
+              <path d="M1000,165 H850" />
+              <path d="M1000,255 H800" />
+              <path d="M1000,285 H700" />
+              <path d="M1000,315 H680" />
+              <path d="M1000,345 H660" />
+              <path d="M1000,375 H550" />
+              <path d="M850,405 H530" />
+              <path d="M1000,435 H510" />
+              <path d="M850,465 H490" />
+              <path d="M1000,495 H760" />
+              <path d="M1000,525 H780" />
+              <path d="M1000,555 H800" />
+              <path d="M1000,585 H820" />
+              <path d="M1000,615 H840" />
+              <path d="M1000,645 H860" />
+              <path d="M1000,675 H880" />
+              <path d="M1000,705 H900" />
+              <path d="M800,105 L775,80" />
+              <path d="M700,135 L670,170" />
+              <path d="M850,165 L810,210" />
+              <path d="M800,255 L690,210" />
+              <path d="M700,285 L600,240" />
+              <path d="M680,315 L560,260" />
+              <path d="M660,345 L520,280" />
+              <path d="M600,240 v-160" />
+              <path d="M560,260 v-180" />
+              <path d="M520,280 v-200" />
+              <path d="M640,210 v-130" />
+              <path d="M480,270 v-170" />
+              <path d="M540,340 L430,280" />
+              <path d="M430,280 v-70" />
+              <path d="M430,210 L370,180" />
+              <path d="M370,180 H260" />
+              <path d="M360,135 H260" />
+              <path d="M230,180 H150" />
+              <path d="M260,135 L230,180" />
+              <path d="M360,235 H260" />
+              <path d="M260,235 L220,210" />
+              <path d="M390,255 H190" />
+              <path d="M550,375 L400,290" />
+              <path d="M530,405 L380,320" />
+              <path d="M510,435 L360,350" />
+              <path d="M490,465 L340,380" />
+              <path d="M400,290 H160" />
+              <path d="M380,320 H130" />
+              <path d="M360,350 H100" />
+              <path d="M340,380 H70" />
+              <path d="M290,590 H190" />
+              <path d="M270,560 H200" />
+              <path d="M260,530 L330,570" />
+              <path d="M260,530 H210" />
+              <path d="M590,590 H420" />
+              <path d="M620,560 H440" />
+              <path d="M650,530 H460" />
+              <path d="M680,500 H480" />
+              <path d="M260,500 L420,590" />
+              <path d="M280,470 L440,560" />
+              <path d="M300,440 L460,530" />
+              <path d="M320,410 L480,500" />
+              <path d="M260,500 H200" />
+              <path d="M280,470 H190" />
+              <path d="M300,440 H180" />
+              <path d="M320,410 H170" />
+              <path d="M820,585 L730,740" />
+              <path d="M800,555 L710,700" />
+              <path d="M780,525 L690,660" />
+              <path d="M760,495 L670,620" />
+              <path d="M670,620 H230" />
+              <path d="M690,660 H250" />
+              <path d="M710,700 H270" />
+              <path d="M730,740 H290" />
+              <path d="M900,705 L870,760" />
+              <path d="M880,675 L820,770" />
+              <path d="M700,765 H420" />
+              <path d="M860,645 L780,770" />
+            </g>
+            <g>
+              <path class="spark" d="M1000,375 H550 L400,290 H160" />
+              <path
+                class="spark spark-delay-1"
+                d="M1000,525 H780 L690,660 H250"
+              />
+              <path class="spark spark-delay-2" d="M1000,135 H700 L670,170" />
+              <path class="spark spark-delay-3" d="M1000,615 H840" />
+              <path
+                class="spark spark-delay-4"
+                d="M1000,435 H510 L360,350 H100"
+              />
+              <path class="spark" d="M1000,705 H900 L870,760" />
+              <path class="spark spark-delay-1" d="M1000,255 H800 L690,210" />
+              <path
+                class="spark spark-delay-2"
+                d="M850,405 H530 L380,320 H130"
+              />
+              <path
+                class="spark spark-delay-3"
+                d="M540,340 L430,280 v-70 L370,180 H260"
+              />
+              <path class="spark spark-delay-4" d="M800,555 L710,700 H270" />
+            </g>
+            <g>
+              <circle class="dot-hollow" cx="670" cy="170" r="4" />
+              <circle class="dot-hollow" cx="810" cy="210" r="4" />
+              <circle class="dot-hollow" cx="690" cy="210" r="4" />
+              <circle class="dot-hollow" cx="640" cy="210" r="4" />
+              <circle class="dot-hollow" cx="480" cy="270" r="4" />
+              <circle class="dot-hollow" cx="480" cy="100" r="4" />
+              <circle class="dot-hollow" cx="540" cy="340" r="4" />
+              <circle class="dot-hollow" cx="360" cy="135" r="4" />
+              <circle class="dot-hollow" cx="150" cy="180" r="4" />
+              <circle class="dot-hollow" cx="260" cy="180" r="4" />
+              <circle class="dot-hollow" cx="360" cy="235" r="4" />
+              <circle class="dot-hollow" cx="220" cy="210" r="4" />
+              <circle class="dot-hollow" cx="390" cy="255" r="4" />
+              <circle class="dot-hollow" cx="190" cy="255" r="4" />
+              <circle class="dot-hollow" cx="160" cy="290" r="4" />
+              <circle class="dot-hollow" cx="130" cy="320" r="4" />
+              <circle class="dot-hollow" cx="100" cy="350" r="4" />
+              <circle class="dot-hollow" cx="70" cy="380" r="4" />
+              <circle class="dot-hollow" cx="170" cy="410" r="4" />
+              <circle class="dot-hollow" cx="180" cy="440" r="4" />
+              <circle class="dot-hollow" cx="190" cy="470" r="4" />
+              <circle class="dot-hollow" cx="200" cy="500" r="4" />
+              <circle class="dot-hollow" cx="330" cy="570" r="4" />
+              <circle class="dot-hollow" cx="210" cy="530" r="4" />
+              <circle class="dot-hollow" cx="200" cy="560" r="4" />
+              <circle class="dot-hollow" cx="270" cy="560" r="4" />
+              <circle class="dot-hollow" cx="290" cy="590" r="4" />
+              <circle class="dot-hollow" cx="190" cy="590" r="4" />
+              <circle class="dot-hollow" cx="590" cy="590" r="4" />
+              <circle class="dot-hollow" cx="620" cy="560" r="4" />
+              <circle class="dot-hollow" cx="650" cy="530" r="4" />
+              <circle class="dot-hollow" cx="290" cy="740" r="4" />
+              <circle class="dot-hollow" cx="270" cy="700" r="4" />
+              <circle class="dot-hollow" cx="250" cy="660" r="4" />
+              <circle class="dot-hollow" cx="230" cy="620" r="4" />
+              <circle class="dot-hollow" cx="840" cy="615" r="4" />
+              <circle class="dot-hollow" cx="870" cy="760" r="4" />
+              <circle class="dot-hollow" cx="700" cy="765" r="4" />
+              <circle class="dot-hollow" cx="420" cy="765" r="4" />
+            </g>
+          </svg>
+        </div>
+      </section>
 
+      <!-- Section 2: About Us（完全採用你原本 SVG） -->
+      <section id="about" class="section">
+        <div class="about-circuit">
+          <svg
+            class="circuit-svg"
+            viewBox="0 0 1000 800"
+            preserveAspectRatio="xMidYMin meet"
+          >
+            <!-- 靜態線路（原樣） -->
+            <g class="line">
+              <path d="M0,105 H200" />
+              <path d="M0,135 H300" />
+              <path d="M0,165 H150" />
+              <path d="M0,255 H200" />
+              <path d="M0,285 H300" />
+              <path d="M0,315 H320" />
+              <path d="M0,345 H340" />
+              <path d="M0,375 H450" />
+              <path d="M150,405 H470" />
+              <path d="M0,435 H490" />
+              <path d="M150,465 H510" />
+              <path d="M0,495 H240" />
+              <path d="M0,525 H220" />
+              <path d="M0,555 H200" />
+              <path d="M0,585 H180" />
+              <path d="M0,615 H160" />
+              <path d="M0,645 H140" />
+              <path d="M0,675 H120" />
+              <path d="M0,705 H100" />
+              <path d="M200,105 L225,80" />
+              <path d="M300,135 L330,170" />
+              <path d="M150,165 L190,210" />
+              <path d="M200,255 L310,210" />
+              <path d="M300,285 L400,240" />
+              <path d="M320,315 L440,260" />
+              <path d="M340,345 L480,280" />
+              <path d="M400,240 v-160" />
+              <path d="M440,260 v-180" />
+              <path d="M480,280 v-200" />
+              <path d="M360,210 v-130" />
+              <path d="M520,270 v-170" />
+              <path d="M460,340 L570,280" />
+              <path d="M570,280 v-70" />
+              <path d="M570,210 L630,180" />
+              <path d="M630,180 H740" />
+              <path d="M640,135 H740" />
+              <path d="M770,180 H850" />
+              <path d="M740,135 L770,180" />
+              <path d="M640,235 H740" />
+              <path d="M740,235 L780,210" />
+              <path d="M610,255 H810" />
+              <path d="M450,375 L600,290" />
+              <path d="M470,405 L620,320" />
+              <path d="M490,435 L640,350" />
+              <path d="M510,465 L660,380" />
+              <path d="M600,290 H840" />
+              <path d="M620,320 H870" />
+              <path d="M640,350 H900" />
+              <path d="M660,380 H930" />
+              <path d="M710,590 H810" />
+              <path d="M730,560 H800" />
+              <path d="M740,530 L670,570" />
+              <path d="M740,530 H790" />
+              <path d="M410,590 H580" />
+              <path d="M380,560 H560" />
+              <path d="M350,530 H540" />
+              <path d="M320,500 H520" />
+              <path d="M740,500 L580,590" />
+              <path d="M720,470 L560,560" />
+              <path d="M700,440 L540,530" />
+              <path d="M680,410 L520,500" />
+              <path d="M740,500 H800" />
+              <path d="M720,470 H810" />
+              <path d="M700,440 H820" />
+              <path d="M680,410 H830" />
+              <path d="M180,585 L270,740" />
+              <path d="M200,555 L290,700" />
+              <path d="M220,525 L310,660" />
+              <path d="M240,495 L330,620" />
+              <path d="M330,620 H770" />
+              <path d="M310,660 H750" />
+              <path d="M290,700 H730" />
+              <path d="M270,740 H710" />
+              <path d="M100,705 L130,760" />
+              <path d="M120,675 L180,770" />
+              <path d="M300,765 H580" />
+              <path d="M140,645 L220,770" />
+            </g>
+            <g>
+              <path class="spark" d="M0,375 H450 L600,290 H840" />
+              <path class="spark spark-delay-1" d="M0,525 H220 L310,660 H750" />
+              <path class="spark spark-delay-2" d="M0,135 H300 L330,170" />
+              <path class="spark spark-delay-3" d="M0,255 H200 L310,210" />
+              <path class="spark spark-delay-4" d="M0,435 H490 L640,350 H900" />
+              <path class="spark" d="M0,705 H100 L130,760" />
+              <path
+                class="spark spark-delay-1"
+                d="M150,405 H470 L620,320 H870"
+              />
+              <path
+                class="spark spark-delay-2"
+                d="M460,340 L570,280 V210 L630,180 H740"
+              />
+              <path class="spark spark-delay-3" d="M200,555 L290,700 H730" />
+              <path class="spark spark-delay-4" d="M680,410 L520,500 H320" />
+            </g>
+            <g>
+              <circle class="dot-hollow" cx="330" cy="170" r="4" />
+              <circle class="dot-hollow" cx="190" cy="210" r="4" />
+              <circle class="dot-hollow" cx="310" cy="210" r="4" />
+              <circle class="dot-hollow" cx="360" cy="210" r="4" />
+              <circle class="dot-hollow" cx="520" cy="270" r="4" />
+              <circle class="dot-hollow" cx="520" cy="100" r="4" />
+              <circle class="dot-hollow" cx="460" cy="340" r="4" />
+              <circle class="dot-hollow" cx="640" cy="135" r="4" />
+              <circle class="dot-hollow" cx="850" cy="180" r="4" />
+              <circle class="dot-hollow" cx="740" cy="180" r="4" />
+              <circle class="dot-hollow" cx="640" cy="235" r="4" />
+              <circle class="dot-hollow" cx="780" cy="210" r="4" />
+              <circle class="dot-hollow" cx="610" cy="255" r="4" />
+              <circle class="dot-hollow" cx="810" cy="255" r="4" />
+              <circle class="dot-hollow" cx="840" cy="290" r="4" />
+              <circle class="dot-hollow" cx="870" cy="320" r="4" />
+              <circle class="dot-hollow" cx="900" cy="350" r="4" />
+              <circle class="dot-hollow" cx="930" cy="380" r="4" />
+              <circle class="dot-hollow" cx="830" cy="410" r="4" />
+              <circle class="dot-hollow" cx="820" cy="440" r="4" />
+              <circle class="dot-hollow" cx="810" cy="470" r="4" />
+              <circle class="dot-hollow" cx="800" cy="500" r="4" />
+              <circle class="dot-hollow" cx="670" cy="570" r="4" />
+              <circle class="dot-hollow" cx="790" cy="530" r="4" />
+              <circle class="dot-hollow" cx="800" cy="560" r="4" />
+              <circle class="dot-hollow" cx="730" cy="560" r="4" />
+              <circle class="dot-hollow" cx="710" cy="590" r="4" />
+              <circle class="dot-hollow" cx="810" cy="590" r="4" />
+              <circle class="dot-hollow" cx="410" cy="590" r="4" />
+              <circle class="dot-hollow" cx="380" cy="560" r="4" />
+              <circle class="dot-hollow" cx="350" cy="530" r="4" />
+              <circle class="dot-hollow" cx="710" cy="740" r="4" />
+              <circle class="dot-hollow" cx="730" cy="700" r="4" />
+              <circle class="dot-hollow" cx="750" cy="660" r="4" />
+              <circle class="dot-hollow" cx="770" cy="620" r="4" />
+              <circle class="dot-hollow" cx="160" cy="615" r="4" />
+              <circle class="dot-hollow" cx="130" cy="760" r="4" />
+              <circle class="dot-hollow" cx="300" cy="765" r="4" />
+              <circle class="dot-hollow" cx="580" cy="765" r="4" />
+            </g>
+          </svg>
+        </div>
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>Ctrlix = Control + Intelligence + eXperience</p>
+          <p>
+            在物理 AI 即將全面到來的時代，<br />Ctrlix
+            致力於為產業打造全新的智慧解方。<br />
+            我們將精準控制與 AI 預測結合，<br />讓各類裝置與控制器擁有真正的智慧。
+          </p>
+        </div>
+      </section>
 
-  </style>
-</head>
-<body>
-  <!-- animated starfield -->
-  <canvas id="starfield"></canvas>
+      <!-- Service -->
+      <section id="service" class="section">
+        <h2>Service</h2>
+        <div class="service-container">
+          <button
+            class="service-item service-btn"
+            data-modal="modal-licence"
+            aria-label="專利研發與授權"
+          >
+            <img src="licence.png" class="service-icon" alt="" />
+            <span class="service-title">專利研發與授權</span>
+          </button>
+          <button
+            class="service-item service-btn"
+            data-modal="modal-tech"
+            aria-label="控制器設計"
+          >
+            <img src="tech.png" class="service-icon" alt="" />
+            <span class="service-title">控制器設計</span>
+          </button>
+        </div>
+      </section>
+    </main>
 
-  <header>
-    <h1>Ctrlix</h1>
-    <p class="tag">Physics‑Inspired AI bridging the digital &amp; physical realms.</p>
-    <div class="btn-wrap">
-      <a href="#capabilities" class="btn">Products and Services</a>
-      <a href="#cases" class="btn">Success Stories</a>
-    </div>
-  </header>
-
-  <!-- Services / Capabilities -->
-  <section id="capabilities">
-    <h2 class="sec-title">Our Capabilities</h2>
-    <div class="grid">
-      <div class="card center">
-        <h3>Physics‑Informed ML</h3>
-        <p>We fuse fundamental physics with machine learning to create accurate, interpretable, and data‑efficient models.</p>
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Email | ctrlixai@gmail.com</p>
+        <p>Line ID | @207lmcjb</p>
       </div>
-      <div class="card"><h3>Product Design</h3><p>Simulation‑driven design workflows turn innovative ideas into manufacturable products.</p></div>
-      <div class="card"><h3>Physics Patent Generation</h3><p>Transform cutting‑edge research into defensible IP portfolios.</p></div>
-      <div class="card"><h3>Edge Device Development</h3><p>Deploy physics‑aware intelligence on low‑power hardware for real‑time insights.</p></div>
-    </div>
-  </section>
+      <div class="company-name"><p>科睿思有限公司</p></div>
+    </footer>
 
-  <!-- Product Showcase -->
-  <section id="products">
-    <h2 class="sec-title">Product Showcase</h2>
-    <div class="grid">
-      <!-- AI‑Optimized Induction Hob -->
-      <a href="induction.html" class="product">
-        <img src="induction_hob.jpg" alt="AI‑Optimized Induction Hob">
-        <div class="product-content">
-          <h3>AI‑Optimized Induction Hob</h3>
-          <p>Dynamic electromagnetic control powered by Physics‑AI for unparalleled efficiency.</p>
+    <!-- Modal 1：專利 -->
+    <div id="modal-licence" class="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true">
+        <button class="close" aria-label="關閉">×</button>
+        <div class="modal-bubbles">
+          <div class="bubble bubble-left"></div>
+          <div class="bubble bubble-right"></div>
         </div>
-      </a>
-      <!-- Smart Grill Pan -->
-      <a href="grill.html"     class="product">
-        <img src="grill_pan.jpg" alt="Smart Grill Pan">
-        <div class="product-content">
-          <h3>Smart Grill Pan</h3>
-          <p>Physics‑AI thermal modeling ensures perfect sear lines and even heating.</p>
+
+        <!-- 桌機版完整內容 -->
+        <div class="panel panel-wide">
+          <h3 class="panel-main-title">專利研發與授權</h3>
+          <p class="panel-sub">
+            我們致力於將物理 AI 核心技術的專利研發與佈局，透過專利授權，<br />協助合作夥伴快速導入智慧控制功能，並確保市場競爭力。
+          </p>
+
+          <div class="panel-grid">
+            <div class="pill over-left">我們的專利策略</div>
+            <div class="pill over-right">我們提供的服務</div>
+
+            <section class="panel-left">
+              <ul class="dot-list left fixed-wrap">
+                <li>建立完整專利地圖：涵蓋感測、演算法、控制器設計。</li>
+                <li>防止模仿與抄襲，確保技術獨特性。</li>
+                <li>授權模式清晰，協助合作夥伴快速商品化。</li>
+              </ul>
+            </section>
+
+            <section class="panel-right">
+              <div class="cols-3 centered fixed-wrap">
+                <div class="col">
+                  <h5>技術授權</h5>
+                  <p>授權控制<br />演算法或模組</p>
+                </div>
+                <div class="col">
+                  <h5>專利授權</h5>
+                  <p>合作方可在既有<br />產品上導入<br />專利技術</p>
+                </div>
+                <div class="col">
+                  <h5>共同開發</h5>
+                  <p>針對新產品合作<br />研發並共享<br />專利成果</p>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
-      </a>
-    </div>
-  </section>
 
-  <!-- Real Cases -->
-  <section id="cases">
-  <h2 class="sec-title">Success Stories</h2>
-  <div class="grid">
-    <div class="case">
-      <a href="cast_iron.html" class="case-link">
-        <img src="cast_iron.jpg" alt="Cast Iron Cookware">
-        <div class="case-content">
-          <h3>Cast Iron Cookware Brand</h3>
-          <p>We partnered with a leading cast iron cookware company…</p>
+        <!-- 手機第一層：兩個選項 -->
+        <div class="modal-card mobile-first">
+          <h3 class="panel-main-title">專利研發與授權</h3>
+          <div class="mobile-pill-options">
+            <button
+              class="mobile-pill"
+              data-open-sub="submodal-patent-strategy"
+            >
+              我們的專利策略
+            </button>
+            <button class="mobile-pill" data-open-sub="submodal-patent-service">
+              我們提供的服務
+            </button>
+          </div>
         </div>
-      </a>
+      </div>
     </div>
-    <div class="case">
-      <a href="home_appliance.html" class="case-link">
-        <img src="home_appliance.jpg" alt="Smart Small Appliance">
-        <div class="case-content">
-          <h3>Smart Small Appliance</h3>
-          <p>Collaborated with a home appliance manufacturer…</p>
+
+    <!-- Modal 2：控制器 -->
+    <div id="modal-tech" class="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true">
+        <button class="close" aria-label="關閉">×</button>
+        <div class="modal-bubbles">
+          <div class="bubble bubble-left"></div>
+          <div class="bubble bubble-right"></div>
         </div>
-      </a>
+
+        <div class="panel panel-wide">
+          <h3 class="panel-main-title">控制器設計</h3>
+          <p class="panel-sub">
+            我們專注於智慧控制器的設計與驗證，將物理 AI 技術直接嵌入硬體，<br />讓合作夥伴的產品能更精準、更可靠、更智慧。
+          </p>
+
+          <div class="panel-grid">
+            <div class="pill over-left">我們的設計策略</div>
+            <div class="pill over-right">我們提供的服務</div>
+
+            <section class="panel-left">
+              <ul class="dot-list left fixed-wrap">
+                <li>感測整合：多點溫度／物理感測器 → 精準數據。</li>
+                <li>AI 分析：物理 AI 模型 → 解讀數據、預測狀態。</li>
+                <li>智慧控制：自動調整火力／能量輸出。</li>
+                <li>模組化設計：可客製化嵌入現有架構。</li>
+              </ul>
+            </section>
+
+            <section class="panel-right">
+              <div class="cols-3 centered fixed-wrap">
+                <div class="col">
+                  <h5>設計驗證服務</h5>
+                  <p>針對合作方產品<br />測試與最佳化</p>
+                </div>
+                <div class="col">
+                  <h5>控制器模組設計</h5>
+                  <p>提供專屬控制器<br />設計方案</p>
+                </div>
+                <div class="col">
+                  <h5>共同開發</h5>
+                  <p>新產品開發時，<br />合作導入物理AI<br />控制技術</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="modal-card mobile-first">
+          <h3 class="panel-main-title">控制器設計</h3>
+          <div class="mobile-pill-options">
+            <button class="mobile-pill" data-open-sub="submodal-tech-strategy">
+              我們的設計策略
+            </button>
+            <button class="mobile-pill" data-open-sub="submodal-tech-service">
+              我們提供的服務
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
 
+    <!-- 第二層 submodal（放在 body 末端，避免任何 stacking/overflow 影響） -->
+    <div id="submodal-patent-strategy" class="submodal" aria-hidden="true">
+      <div class="submodal-card">
+        <button class="submodal-close" data-close-sub>← 返回</button>
+        <h4>我們的專利策略</h4>
+        <ul>
+          <li>建立完整專利地圖：涵蓋感測、演算法、控制器設計。</li>
+          <li>防止模仿與抄襲，確保技術獨特性。</li>
+          <li>授權模式清晰，協助合作夥伴快速商品化。</li>
+        </ul>
+      </div>
+    </div>
 
+    <div id="submodal-patent-service" class="submodal" aria-hidden="true">
+      <div class="submodal-card">
+        <button class="submodal-close" data-close-sub>← 返回</button>
+        <h4>我們提供的服務</h4>
+        <p><b>技術授權：</b>授權控制、演算法或模組</p>
+        <p><b>專利授權：</b>既有產品導入專利技術</p>
+        <p><b>共同開發：</b>新產品研發與成果共享</p>
+      </div>
+    </div>
 
-  <footer>
-    <p>Ctrlix Co., Ltd. © 2025</p>
-    <p>Email: <a href="mailto:ctrlixai@gmail.com">ctrlixai@gmail.com</a> ｜ Line: joan99884 ｜ phone: (886)92‑182‑0652</p>
-  </footer>
+    <div id="submodal-tech-strategy" class="submodal" aria-hidden="true">
+      <div class="submodal-card">
+        <button class="submodal-close" data-close-sub>← 返回</button>
+        <h4>我們的設計策略</h4>
+        <ul>
+          <li>感測整合：多點溫度／物理感測器 → 精準數據。</li>
+          <li>AI 分析：物理 AI 模型 → 解讀數據、預測狀態。</li>
+          <li>智慧控制：自動調整火力／能量輸出。</li>
+          <li>模組化設計：可客製化嵌入現有架構。</li>
+        </ul>
+      </div>
+    </div>
 
-  <!-- Starfield animation -->
-  <script>
-    document.addEventListener('DOMContentLoaded',()=>{
-      const canvas=document.getElementById('starfield');
-      const ctx=canvas.getContext('2d');
-      let stars=[];
-      const NUM=160;
+    <div id="submodal-tech-service" class="submodal" aria-hidden="true">
+      <div class="submodal-card">
+        <button class="submodal-close" data-close-sub>← 返回</button>
+        <h4>我們提供的服務</h4>
+        <p><b>設計驗證服務：</b>針對合作方產品進行測試與最佳化</p>
+        <p><b>控制器模組設計：</b>提供專屬控制器設計方案</p>
+        <p><b>共同開發：</b>新產品導入物理AI控制技術</p>
+      </div>
+    </div>
 
-      function resize(){
-        canvas.width=window.innerWidth;
-        canvas.height=window.innerHeight;
-      }
-
-      class Star{
-        constructor(){this.reset();}
-        reset(){
-          this.x=Math.random()*canvas.width;
-          this.y=Math.random()*canvas.height;
-          this.z=Math.random()*canvas.width;
-          this.pz=this.z;
-        }
-        update(){
-          this.z-=2;
-          if(this.z<1){this.reset();this.z=canvas.width;this.pz=this.z;}
-        }
-        draw(){
-          const sx=(this.x-canvas.width/2)*(canvas.width/this.z)+canvas.width/2;
-          const sy=(this.y-canvas.height/2)*(canvas.width/this.z)+canvas.height/2;
-          const px=(this.x-canvas.width/2)*(canvas.width/this.pz)+canvas.width/2;
-          const py=(this.y-canvas.height/2)*(canvas.width/this.pz)+canvas.height/2;
-          this.pz=this.z;
-          ctx.strokeStyle='hsla(190,100%,70%,0.8)';
-          ctx.lineWidth=1;
-          ctx.beginPath();
-          ctx.moveTo(px,py);
-          ctx.lineTo(sx,sy);
-          ctx.stroke();
-        }
-      }
-
-      function init(){
-        stars=Array.from({length:NUM},()=>new Star());
-      }
-
-      function animate(){
-        ctx.fillStyle='rgba(13,17,23,0.35)';
-        ctx.fillRect(0,0,canvas.width,canvas.height);
-        stars.forEach(s=>{s.update();s.draw();});
-        requestAnimationFrame(animate);
-      }
-
-      window.addEventListener('resize',()=>{resize();});
-      resize();
-      init();
-      animate();
-    });
-  </script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    if (!location.hash) {
-      window.scrollTo(0, 0);
-    }
-  });
-</script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
-
-
