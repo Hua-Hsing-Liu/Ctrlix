@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <filter id="ui-sh" x="-10%" y="-20%" width="120%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#111214" flood-opacity=".08"/></filter>
+    <linearGradient id="gas-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5F6F8"/><stop offset="1" stop-color="#F5F6F8"/>
+    </linearGradient>
+    <linearGradient id="gas-heat" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#0111A2"/><stop offset=".45" stop-color="#3FA7F5"/>
+      <stop offset=".7" stop-color="#FFC531"/><stop offset="1" stop-color="#FF4F00"/>
+    </linearGradient>
+    <radialGradient id="gas-hot" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FF4F00"/><stop offset=".45" stop-color="#FFB12B"/>
+      <stop offset=".8" stop-color="#3FA7F5"/><stop offset="1" stop-color="#0111A2"/>
+    </radialGradient>
+    <filter id="gas-sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".14"/>
+    </filter>
+    <filter id="gas-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#gas-bg)"/>
+
+  <!-- 氣流 -->
+  <g fill="none" stroke="#C3C8D0" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10">
+    <path d="M60 130 C140 120 220 150 300 210"/><path d="M60 200 C140 200 220 210 300 236"/>
+  </g>
+  <g transform="translate(110 120)"><circle r="9" fill="#0111A2"/><circle cx="13" cy="-3" r="5.3999999999999995" fill="#0111A2" opacity=".8"/></g><g transform="translate(160 80)"><circle r="7" fill="#FF4F00"/><circle cx="11" cy="-3" r="4.2" fill="#FF4F00" opacity=".8"/></g><g transform="translate(150 160)"><circle r="8" fill="#3FA7F5"/><circle cx="12" cy="-3" r="4.8" fill="#3FA7F5" opacity=".8"/></g><g transform="translate(210 120)"><circle r="6" fill="#0111A2"/><circle cx="10" cy="-3" r="3.5999999999999996" fill="#0111A2" opacity=".8"/></g><g transform="translate(230 180)"><circle r="8" fill="#FF4F00"/><circle cx="12" cy="-3" r="4.8" fill="#FF4F00" opacity=".8"/></g><g transform="translate(190 220)"><circle r="7" fill="#3FA7F5"/><circle cx="11" cy="-3" r="4.2" fill="#3FA7F5" opacity=".8"/></g><g transform="translate(260 140)"><circle r="6" fill="#0111A2"/><circle cx="10" cy="-3" r="3.5999999999999996" fill="#0111A2" opacity=".8"/></g><g transform="translate(90 200)"><circle r="7" fill="#FF4F00"/><circle cx="11" cy="-3" r="4.2" fill="#FF4F00" opacity=".8"/></g>
+  <text x="70" y="280" text-anchor="start" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" font-weight="700" fill="#58595B">待測氣體</text>
+  <!-- PCB + 金屬罩氣體感測器 -->
+  <path d="M250 300 L420 210 L590 300 L420 390 Z" fill="#0E6B4F"/>
+  <path d="M250 300 V314 L420 404 L590 314 V300 L420 390 Z" fill="#0A4F3A"/>
+  <g stroke="#E2B655" stroke-width="2" fill="none" opacity=".8">
+    <path d="M300 300 L360 268 M480 268 L540 300 M420 360 L420 330"/>
+  </g>
+  <defs>
+    <linearGradient id="gas-metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8E95A1"/><stop offset=".45" stop-color="#E4E7EC"/><stop offset="1" stop-color="#7D8490"/>
+    </linearGradient>
+  </defs>
+  <path d="M356 220 V294 A64 22 0 0 0 484 294 V220 Z" fill="url(#gas-metal)"/>
+  <ellipse cx="420" cy="220" rx="64" ry="22" fill="#D5D9E0"/>
+  <ellipse cx="420" cy="220" rx="46" ry="15" fill="#B4BAC4"/>
+  <g stroke="#7D8490" stroke-width="2">
+    <path d="M384 216 H456 M388 222 H452 M394 228 H446"/>
+  </g>
+  <circle cx="420" cy="220" r="60" fill="none" stroke="#0111A2" stroke-width="2" opacity=".35" transform="matrix(1 0 0 .35 0 143)"/>
+  <text x="420" y="180" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="700" fill="#0111A2">氣體感測器</text>
+  <!-- AI 辨識卡 -->
+  <rect x="590.5" y="40.5" width="185" height="189" rx="18" fill="#FFFFFF" stroke="#EEEFF2" filter="url(#ui-sh)"/>
+  
+  <text x="606" y="68" text-anchor="start" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="700" fill="#000000">AI 氣體辨識</text>
+  <path d="M606 170 H760" stroke="#D5D8DE" stroke-width="2"/>
+  <path d="M608 168 C624 166 630 100 642 100 S656 166 670 166 S690 130 700 130 S716 166 730 166 S748 150 758 150" fill="none" stroke="#0111A2" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="606" y="186" width="70" height="24" rx="12" fill="#0111A2"/>
+  <text x="641" y="202" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">氣體 A</text>
+  <rect x="684" y="186" width="76" height="24" rx="12" fill="#FF4F00"/>
+  <text x="722" y="202" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">濃度警示</text>
+  <path d="M586 170 C560 180 520 196 488 214" fill="none" stroke="#0111A2" stroke-width="2" stroke-dasharray="4 5"/>
+
+  <rect x="24.5" y="420.5" width="751" height="159" rx="18" fill="#FFFFFF" stroke="#EEEFF2" filter="url(#ui-sh)"/>
+  <circle cx="118" cy="470" r="23" fill="#0111A2"/>
+  <text x="118" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">1</text>
+  <text x="118" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">氣體感測</text>
+  <text x="118" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="2" fill="#6B6E75">GAS SENSING</text>
+  <path d="M162 470 H252" stroke="#FF4F00" stroke-width="2.5" stroke-dasharray="7 6" fill="none"/><path d="M250 463 L262 470 L250 477 Z" fill="#FF4F00"/>
+  <circle cx="306" cy="470" r="23" fill="#0111A2"/>
+  <text x="306" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">2</text>
+  <text x="306" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">感測物理模型</text>
+  <text x="306" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="2" fill="#6B6E75">PHYSICS MODEL</text>
+  <path d="M350 470 H440" stroke="#FF4F00" stroke-width="2.5" stroke-dasharray="7 6" fill="none"/><path d="M438 463 L450 470 L438 477 Z" fill="#FF4F00"/>
+  <circle cx="494" cy="470" r="23" fill="#0111A2"/>
+  <text x="494" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">3</text>
+  <text x="494" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">AI 氣體辨識</text>
+  <text x="494" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="2" fill="#6B6E75">AI RECOGNITION</text>
+  <path d="M538 470 H628" stroke="#FF4F00" stroke-width="2.5" stroke-dasharray="7 6" fill="none"/><path d="M626 463 L638 470 L626 477 Z" fill="#FF4F00"/>
+  <circle cx="682" cy="470" r="23" fill="#FF4F00"/>
+  <text x="682" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">4</text>
+  <text x="682" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">警示與控制</text>
+  <text x="682" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="2" fill="#6B6E75">ALERT &amp; CONTROL</text>
+</svg>

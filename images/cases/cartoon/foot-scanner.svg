@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="#F5F6F8"/>
+  <path d="M120 360 C 40 260, 110 60, 330 60 C 560 60, 760 90, 740 250 C 720 380, 520 370, 400 370 C 280 370, 180 400, 120 360 Z" fill="#DCE6FF"/>
+  <path d="M92 78 Q92 92 106 92 Q92 92 92 106 Q92 92 78 92 Q92 92 92 78 Z" fill="#FF4F00"/><path d="M712 59 Q712 70 723 70 Q712 70 712 81 Q712 70 701 70 Q712 70 712 59 Z" fill="#0111A2"/><path d="M740 291 Q740 300 749 300 Q740 300 740 309 Q740 300 731 300 Q740 300 740 291 Z" fill="#FF4F00"/><path d="M64 272 Q64 280 72 280 Q64 280 64 288 Q64 280 56 280 Q64 280 64 272 Z" fill="#0111A2"/>
+
+  <ellipse cx="330" cy="352" rx="260" ry="14" fill="#000" opacity=".12"/>
+  <!-- 木頭底座 -->
+  <path d="M100 300 L330 250 L590 300 L360 352 Z" fill="#E2B87C" stroke="#1A1C22" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M100 300 V316 L360 368 L590 316 V300 L360 352 Z" fill="#C99A5B" stroke="#1A1C22" stroke-width="5" stroke-linejoin="round"/>
+  <!-- 掃描平台 -->
+  <path d="M150 262 L330 222 L530 262 L350 304 Z" fill="#FFFFFF" stroke="#1A1C22" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M190 260 L330 230 L486 262 L350 292 Z" fill="#7FA6F0" stroke="#1A1C22" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M150 262 V282 L350 326 L530 282 V262 L350 304 Z" fill="#F3F4F7" stroke="#1A1C22" stroke-width="5" stroke-linejoin="round"/>
+  <!-- 腳印 -->
+  <g fill="#FF8A5B" stroke="#1A1C22" stroke-width="3">
+    <ellipse cx="300" cy="262" rx="30" ry="12" transform="rotate(-12 300 262)"/>
+    <ellipse cx="380" cy="268" rx="30" ry="12" transform="rotate(-12 380 268)"/>
+  </g>
+  <!-- 掃描光 -->
+  <g stroke="#9FC0FF" stroke-width="6" stroke-linecap="round" opacity=".9">
+    <path d="M300 236 V170 M340 228 V150 M380 238 V176"/>
+  </g>
+  <!-- 平板支架 -->
+  <path d="M600 330 L620 170" stroke="#1A1C22" stroke-width="10" stroke-linecap="round"/>
+  <rect x="560" y="320" width="90" height="22" rx="10" fill="#FFFFFF" stroke="#1A1C22" stroke-width="5"/>
+  <g transform="rotate(-6 640 130)">
+    <rect x="560" y="70" width="170" height="120" rx="18" fill="#FFFFFF" stroke="#1A1C22" stroke-width="5"/>
+    <rect x="574" y="84" width="142" height="92" rx="10" fill="#18213F"/>
+    <ellipse cx="620" cy="130" rx="14" ry="30" fill="#FF8A5B"/>
+    <ellipse cx="660" cy="130" rx="14" ry="30" fill="#FF8A5B"/>
+    <ellipse cx="620" cy="122" rx="7" ry="14" fill="#F4D35E"/>
+    <ellipse cx="660" cy="122" rx="7" ry="14" fill="#F4D35E"/>
+    <rect x="692" y="98" width="14" height="66" rx="7" fill="#0111A2"/>
+  </g>
+
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="path-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5F6F8"/><stop offset="1" stop-color="#F5F6F8"/>
+    </linearGradient>
+    <linearGradient id="path-heat" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#0111A2"/><stop offset=".45" stop-color="#3FA7F5"/>
+      <stop offset=".7" stop-color="#FFC531"/><stop offset="1" stop-color="#FF4F00"/>
+    </linearGradient>
+    <radialGradient id="path-hot" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FF4F00"/><stop offset=".45" stop-color="#FFB12B"/>
+      <stop offset=".8" stop-color="#3FA7F5"/><stop offset="1" stop-color="#0111A2"/>
+    </radialGradient>
+    <filter id="path-sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity=".14"/>
+    </filter>
+    <filter id="path-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#path-bg)"/>
+
+  <!-- 房間：後牆 -->
+  <path d="M150 260 L400 116 V30 L150 174 Z" fill="#E7EAF0"/>
+  <path d="M400 116 L650 260 V174 L400 30 Z" fill="#DADEE6"/>
+  <!-- 地板 -->
+  <g transform="translate(400 260) scale(1 .58) rotate(45)">
+    <rect x="-176" y="-176" width="352" height="352" fill="#F7F3EC"/>
+    <g stroke="#E6DED0" stroke-width="2">
+      <path d="M-176 -88 H176 M-176 0 H176 M-176 88 H176 M-88 -176 V176 M0 -176 V176 M88 -176 V176"/>
+    </g>
+    <!-- 床、桌 -->
+    <rect x="-166" y="-166" width="110" height="160" rx="10" fill="#C9D2EE"/>
+    <rect x="-160" y="-160" width="98" height="40" rx="8" fill="#FFFFFF"/>
+    <rect x="70" y="-160" width="90" height="70" rx="10" fill="#D8CDBB"/>
+    <!-- 行走路徑 -->
+    <path d="M-60 -60 C0 -40 -20 40 40 60 S120 80 130 140" fill="none" stroke="#FF4F00" stroke-width="7" stroke-dasharray="2 14" stroke-linecap="round"/>
+    <circle cx="-60" cy="-60" r="10" fill="#0111A2"/>
+  </g>
+  <!-- 長者位置標記 -->
+  <g transform="translate(-211 12)"><path d="M590 318 C590 296 618 296 618 318 C618 336 604 348 604 358 C604 348 590 336 590 318 Z" fill="#FF4F00"/>
+  <circle cx="604" cy="316" r="6" fill="#FFFFFF"/></g>
+  <!-- 攝影機與視野 -->
+  <path d="M396 64 L240 300 L560 300 Z" fill="#0111A2" opacity=".08"/>
+  <rect x="380" y="48" width="40" height="24" rx="6" fill="#1A1C22"/>
+  <circle cx="400" cy="72" r="8" fill="#0111A2"/>
+  <text x="430" y="60" text-anchor="start" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="15" font-weight="700" fill="#0111A2">影像追蹤</text>
+  <!-- 照護 APP -->
+  <rect x="640.5" y="40.5" width="135" height="249" rx="8" fill="#FFFFFF" stroke="#E2E3E6"/>
+  
+  <rect x="652" y="58" width="112" height="214" rx="10" fill="#F5F6F8"/>
+  <text x="662" y="82" text-anchor="start" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="13" font-weight="700" fill="#000000">照護 APP</text>
+  <rect x="662" y="92" width="92" height="92" rx="8" fill="#FFFFFF"/>
+  <path d="M672 110 C700 116 690 150 716 156 S744 168 746 176" fill="none" stroke="#FF4F00" stroke-width="4" stroke-dasharray="1 7" stroke-linecap="round"/>
+  <circle cx="672" cy="110" r="4" fill="#0111A2"/><circle cx="746" cy="176" r="5" fill="#FF4F00"/>
+  <rect x="662" y="196" width="92" height="8" rx="4" fill="#E4E5E8"/>
+  <rect x="662" y="196" width="64" height="8" rx="4" fill="#0111A2"/>
+  <rect x="662" y="214" width="92" height="8" rx="4" fill="#E4E5E8"/>
+  <rect x="662" y="214" width="40" height="8" rx="4" fill="#FF4F00"/>
+  <rect x="662" y="236" width="92" height="24" rx="12" fill="#000000"/>
+  <text x="708" y="252" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">今日紀錄</text>
+  <!-- 物理修正卡 -->
+  <rect x="24.5" y="40.5" width="169" height="115" rx="8" fill="#FFFFFF" stroke="#E2E3E6"/>
+  
+  <text x="40" y="68" text-anchor="start" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="14" font-weight="700" fill="#000000">光學物理修正</text>
+  <circle cx="74" cy="112" r="22" fill="none" stroke="#C3C8D0" stroke-width="3" stroke-dasharray="4 4"/>
+  <circle cx="74" cy="112" r="6" fill="#C3C8D0"/>
+  <path d="M104 112 H128" stroke="#FF4F00" stroke-width="3"/><path d="M126 105 L136 112 L126 119 Z" fill="#FF4F00"/>
+  <circle cx="158" cy="112" r="10" fill="none" stroke="#0111A2" stroke-width="3"/>
+  <circle cx="158" cy="112" r="4" fill="#0111A2"/>
+
+  <rect x="24.5" y="420.5" width="751" height="159" rx="8" fill="#FFFFFF" stroke="#E2E3E6"/>
+  <circle cx="118" cy="470" r="21" fill="#000000"/>
+  <text x="118" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">1</text>
+  <text x="118" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">影像追蹤</text>
+  <text x="118" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="1" fill="#58595B">VISION TRACKING</text>
+  <path d="M158 470 H266" stroke="#B9BBC0" stroke-width="2" fill="none"/>
+  <circle cx="306" cy="470" r="21" fill="#000000"/>
+  <text x="306" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">2</text>
+  <text x="306" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">光學物理修正</text>
+  <text x="306" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="1" fill="#58595B">OPTICAL PHYSICS</text>
+  <path d="M346 470 H454" stroke="#B9BBC0" stroke-width="2" fill="none"/>
+  <circle cx="494" cy="470" r="21" fill="#000000"/>
+  <text x="494" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">3</text>
+  <text x="494" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">AI 路徑分析</text>
+  <text x="494" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="1" fill="#58595B">AI PATH ANALYSIS</text>
+  <path d="M534 470 H642" stroke="#B9BBC0" stroke-width="2" fill="none"/>
+  <circle cx="682" cy="470" r="21" fill="#FF4F00"/>
+  <text x="682" y="478" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#fff">4</text>
+  <text x="682" y="525" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="24" font-weight="700" fill="#000000">照護 APP</text>
+  <text x="682" y="556" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="16" letter-spacing="1" fill="#58595B">CARE APP</text>
+</svg>
